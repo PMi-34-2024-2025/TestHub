@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="PE.DesktopApplication.TestHub.WPF.QuestionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PE.DesktopApplication.TestHub.WPF"
+             mc:Ignorable="d" Width="1000">
+    <Grid>
+        <StackPanel Background="White">
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="10 10 10 10" Content="Вкажіть питання:" FontSize="16"></Label>
+                <TextBox Name="txtQuestion" Width="600" Margin="0,10,0,10" FontSize="16" />
+                <Button Margin="50 10 " Content="Додати варіант" Width="150" Click="BtnAddAnswer_Click" FontSize="16" />
+            </StackPanel>
+            
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height = "150">
+                <StackPanel Name="answersPanel" />
+            </ScrollViewer>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="PE.DesktopApplication.TestHub.WPF.MainLoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PE.DesktopApplication.TestHub.WPF"
+        mc:Ignorable="d"
+        Title="MainLoginWindow" Height="720" Width="1280">
+    <Grid>
+        <StackPanel Margin="328 121" Width="409" Height="283">
+            <Label Content="Вхід" Margin="120 21" FontFamily="Microsoft Sans Serif" FontSize="18" HorizontalContentAlignment="Center"></Label>
+            <StackPanel Orientation="Horizontal" Height="40">
+                <Label Content="Логін" Margin="33 5" FontFamily="Microsoft Sans Serif" FontSize="16" HorizontalAlignment="Left"/>
+                <TextBox x:Name="Login" Margin="36 0 0 0" TextWrapping="Wrap" Width="210" Height="30" HorizontalAlignment="Right" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Margin="0 20"  Orientation="Horizontal" Height="40">
+                <Label Content="Пароль" Margin="33 5" FontFamily="Microsoft Sans Serif" FontSize="16" HorizontalAlignment="Left"/>
+                <PasswordBox x:Name="Password" Margin="16 0 0 0" Width="210" Height="30" HorizontalAlignment="Right" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="RegButton"  Content="Зареєструватися" Background="#FF30A0DA" FontSize="16" FontFamily="Microsoft Sans Serif" Width="158" Height="40" Margin="33 15" Click="RegButton_Click"></Button>
+                <Button x:Name="LogButton" Content="Увійти" Background="#FF30A0DA" FontSize="16" FontFamily="Microsoft Sans Serif" Width="138" Height="40" Margin="0 15" Click="LogButton_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

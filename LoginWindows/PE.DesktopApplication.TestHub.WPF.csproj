@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="minus.png" />
+    <None Remove="plus.png" />
+    <None Remove="quit.jpg" />
+    <None Remove="reload.jpg" />
+    <None Remove="search.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFrameworkUsing\PE.DesktopApplication.TestHub.DAL.csproj" />
+    <ProjectReference Include="..\PasswordHasher\PE.DesktopApplication.TestHub.BLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="minus.png" />
+    <Resource Include="plus.png" />
+    <Resource Include="quit.jpg" />
+    <Resource Include="reload.jpg" />
+    <Resource Include="search.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AnswerControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="QuestionControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShowingResultWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestWithQuests.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

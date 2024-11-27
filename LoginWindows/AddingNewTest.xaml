@@ -1,0 +1,35 @@
+﻿<Window x:Class="PE.DesktopApplication.TestHub.WPF.AddingNewTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PE.DesktopApplication.TestHub.WPF"
+        mc:Ignorable="d"
+        Title="New Test" Height="720" Width="1280">
+    <Grid>
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="20 0 100 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Назва тесту:" FontSize="16"></Label>
+                        <TextBox Name="txtTestName" Width="700" Margin="50,4,0,10" FontSize="16" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Предметна область:" FontSize="16"></Label>
+                        <TextBox Name="txtAreaName" Width="643" Margin="50,5,0,10" FontSize="16"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Час проходження (хвилин):" FontSize="16" />
+                        <TextBox Name="minsToPass" FontSize="16" Width="588" Margin="50,5,0,10"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <Button Content="Додати питання" Click="BtnAddQuestion_Click" Width="150" Margin="40,0,10,0" FontSize="18" />
+            </StackPanel>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="490" Margin="10">
+                <StackPanel Name="questionsPanel" />
+            </ScrollViewer>
+            <Button Content="Створити тест" Click="BtnCreateTest_Click" Width="150" Height="50" FontSize="18"/>
+        </StackPanel>
+    </Grid>
+</Window>
